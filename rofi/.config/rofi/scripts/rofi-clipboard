@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
+choice="$(
+    clipvault list | 
+    awk '{$1=$1; print}' | 
+    rofi \
+            -dmenu \
+            -config "$ROFI_CONFIG" \
+            -theme-str "icon-search { filename: '~/.config/rofi/icons/clipboard.svg'; }"
+)"
+
+id="$(echo "$choice" | awk '{print $1}')"
+
+if [ -n "$choice" ]; then
+    clipvault get "$id" | wl-copy
+fi

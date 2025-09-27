@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Archivo de configuración Rofi (opcional)
+ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
+
+while true; do
+    # Pedir expresión matemática al usuario
+    expr=$(
+        rofi \
+            -dmenu \
+            -config "$ROFI_CONFIG" \
+            -theme-str "icon-search { filename: '~/.config/rofi/icons/math.svg'; }"
+    )
+
+    # Salir si el usuario cancela
+    [[ -z "$expr" ]] && exit
+
+    # Evaluar la expresión usando bc
+    # Para soporte de decimales:
+    result=$(echo "scale=6; $expr" | bc -l 2>/dev/null)
+
+    # Mostrar resultado en un Rofi info box
+    if [[ -n "$result" ]]; then
+        rofi -e "$expr = $result" -config "$ROFI_CONFIG"
+    else
+        rofi -e "Error: expresión inválida" -config "$ROFI_CONFIG"
+    fi
+done

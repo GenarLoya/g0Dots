@@ -1,0 +1,18 @@
+{
+    "disk": {
+        "interval": 30,
+        "path": "/",
+        "format": " {used} ({percentage_used}%)",
+        "tooltip-format": "Storage => {used} / {total} ({percentage_used}%)",
+        "warning": 80,
+        "critical": 90
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "format": " {}%",
+        "tooltip": true
+    }
+}

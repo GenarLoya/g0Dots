@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Detectar monitor enfocado y devolver la ruta de config
+monitor=$(hyprctl -j monitors | jq -r '.[] | select(.focused==true) | .name')
+
+if [[ "$monitor" == "eDP-1" ]]; then
+    echo "$HOME/.config/rofi/configs/smallconfig.rasi"
+else
+    echo "$HOME/.config/rofi/configs/baseconfig.rasi"
+fi

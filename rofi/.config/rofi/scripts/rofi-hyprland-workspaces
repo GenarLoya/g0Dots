@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Archivo de configuración Rofi
+ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
+
+# Obtener lista de workspaces
+workspaces=$(hyprctl -j workspaces | jq -r '.[] | "\(.id): \(.monitor) W: \(.lastwindowtitle)"')
+
+# Mostrar menú con Rofi
+choice=$(
+    echo "$workspaces" | 
+     rofi \
+        -dmenu \
+        -config "$ROFI_CONFIG" \
+        -theme-str "icon-search { filename: '~/.config/rofi/icons/workspace.svg'; }" 
+)
+
+# Si elige algo, extraer el id y cambiar
+if [[ -n "$choice" ]]; then
+    ws_id=$(echo "$choice" | cut -d: -f1)
+    hyprctl dispatch workspace "$ws_id"
+fi

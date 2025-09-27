@@ -1,0 +1,13 @@
+configuration {
+    modes: "window,run,ssh,drun";
+    sorting-method: "normal";
+    show-icons:true;
+    matching: "regex";
+    drun-match-fields: "name";
+    display-run: "Menu:";
+    display-ssh: "SSH:";
+    display-drun: "Apps:";
+    display-window: "Windows:";
+}
+
+@theme "~/.config/rofi/theme.rasi"
