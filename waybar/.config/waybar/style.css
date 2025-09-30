@@ -1,68 +1,68 @@
 window#waybar {
-    background: rgba(26, 27, 38, 0.75);
-    color: #c0caf5;
-    transition: background-color .5s;
+  background: rgba(26, 27, 38, 0.75);
+  color: #c0caf5;
+  transition: background-color 0.5s;
 }
 
 /* Monitor AL */
 * {
-    font-family: "JetBrainsMono Nerd Font Mono";
-    transition: background-color .3s ease-out;
+  font-family: "JetBrainsMono Nerd Font Mono";
+  transition: background-color 0.3s ease-out;
 }
 
 window.laptop * {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 window.laptoptop * {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 window.external1 * {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 window.external1top * {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 /* Modules positioning */
 window.laptop .modules-left,
 window.laptop .modules-center,
 window.laptop .modules-right {
-    padding: 0px 10px;
-    border-radius: 15px;
-    margin: 3px 10px;
+  padding: 0px 10px;
+  border-radius: 15px;
+  margin: 3px 10px;
 }
 
 window.laptoptop .modules-left,
 window.laptoptop .modules-center,
 window.laptoptop .modules-right {
-    padding: 5px 10px;
-    border-radius: 15px;
-    margin: 3px 10px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 3px 10px;
 }
 
 window.external1top .modules-left,
 window.external1top .modules-center,
 window.external1top .modules-right {
-    padding: 5px 10px;
-    border-radius: 15px;
-    margin: 3px 10px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 3px 10px;
 }
 
 .modules-center {
-    background: transparent;
-    padding: 0 12px;
+  background: transparent;
+  padding: 0 12px;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    background: rgba(0, 0, 8, .7);
-    padding: 0px 12px;
-    border-radius: 15px;
-    margin: 5px 10px;
+  background: rgba(0, 0, 8, 0.7);
+  padding: 0px 20px;
+  border-radius: 15px;
+  margin: 5px 10px;
 }
 
 /* Modules */
@@ -84,8 +84,13 @@ window.external1top .modules-right {
 #power-profiles-daemon,
 #language,
 #mpd {
-    padding: 0 10px;
-    border-radius: 15px;
+  padding: 0 10px;
+  border-radius: 15px;
+}
+
+#submap {
+  background-color: rebeccapurple;
+  padding: 0 10px;
 }
 
 /* Modules hover effects */
@@ -107,45 +112,45 @@ window.external1top .modules-right {
 #power-profiles-daemon:hover,
 #language:hover,
 #mpd:hover {
-    background: rgba(26, 27, 38, 0.9);
+  background: rgba(26, 27, 38, 0.9);
 }
 
 #workspaces button {
-    background: transparent;
-    font-weight: 900;
-    font-size: 13pt;
-    color: #c0caf5;
-    border: none;
-    border-radius: 0px;
-    padding: 0 5px;
+  background: transparent;
+  font-weight: 900;
+  font-size: 13pt;
+  color: #c0caf5;
+  border: none;
+  border-radius: 0px;
+  padding: 0 5px;
 }
 
 #workspaces button.active {
-    background: #13131d;
+  background: #13131d;
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
-    box-shadow: none;
+  background: #11111b;
+  color: #cdd6f4;
+  box-shadow: none;
 }
 
 window.laptop #workspaces button {
-    font-size: 12pt;
-    padding: 0 2px;
+  font-size: 12pt;
+  padding: 0 2px;
 }
 
 #custom-arch {
-    padding: 0 5px;
-    font-size: 25px;
-    transition: color .5s;
+  padding: 0 5px;
+  font-size: 25px;
+  transition: color 0.5s;
 }
 
 window.laptop #custom-arch {
-    padding: 0 5px;
-    font-size: 20px;
+  padding: 0 5px;
+  font-size: 20px;
 }
 
 #custom-arch:hover {
-    color: #1793d1;
+  color: #1793d1;
 }
