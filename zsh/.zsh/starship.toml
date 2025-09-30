@@ -1,0 +1,19 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[hostname]
+format = "[$ssh_symbol$hostname]($style) in "
+
+[character]
+success_symbol = "[](fg:bold text)"
+error_symbol = "[](fg:bold red)"
+
+
+[os]
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = ' [](fg:cyan) '
+Ubuntu = ' '
+Macos = '󰀵 '
+Unknown = '󰠥 '
