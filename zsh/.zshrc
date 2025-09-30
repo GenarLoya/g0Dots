@@ -23,6 +23,10 @@ export PATH="$HOME/.config/my-utils:$PATH"
 # Editor
 export EDITOR=micro
 
+# Go environment
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
 # fnm
 export PATH="/run/user/1000/fnm_multishells/31040_1758692299652/bin":$PATH
 export FNM_MULTISHELL_PATH="/run/user/1000/fnm_multishells/31040_1758692299652"
@@ -38,6 +42,7 @@ rehash
 fnm default $(cat ~/.node-version)
 
 # Starship init
+export STARSHIP_CONFIG=~/.zsh/starship.toml
 eval "$(starship init zsh)"
 
 source $ZSH/oh-my-zsh.sh

@@ -6,6 +6,7 @@ choice="$(
     awk '{$1=$1; print}' | 
     rofi \
             -dmenu \
+            -p "Clipboard" \
             -config "$ROFI_CONFIG" \
             -theme-str "icon-search { filename: '~/.config/rofi/icons/clipboard.svg'; }"
 )"
