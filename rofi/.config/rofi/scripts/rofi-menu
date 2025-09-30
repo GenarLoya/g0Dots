@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Configuración Rofi
+ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
+
+# Opciones del menú
+options="💻 Workspaces\n🧮 Calc\n🔋 Power Menu"
+
+# Mostrar menú
+choice=$(echo -e "$options" | rofi -dmenu -p "Rofi Launcher" -config "$ROFI_CONFIG")
+
+# Ejecutar acción según elección
+case "$choice" in
+    "💻 Workspaces")
+        ~/.config/rofi/scripts/rofi-hyprland-workspaces
+        ;;
+    "🧮 Calc")
+        ~/.config/rofi/scripts/rofi-calc
+        ;;
+    "🔋 Power Menu")
+        ~/.config/rofi/scripts/rofi-power-menu
+        ;;
+    "📋 Clipboard")
+        ~/.config/rofi/scripts/rofi-clipboard
+        ;;
+esac
