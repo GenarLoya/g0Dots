@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Configuración Rofi
+ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
+
+# Pregunta de confirmación
+options="Sí\nNo"
+
+# Mostrar menú
+choice=$(echo -e "$options" | rofi -dmenu -p "¿Are you sure you want to power off?" -config "$ROFI_CONFIG")
+
+# Ejecutar acción según elección
+case "$choice" in
+    "Sí")
+        systemctl poweroff
+        ;;
+    "No")
+        exit 0
+        ;;
+esac

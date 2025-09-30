@@ -14,7 +14,8 @@
             "hyprland/workspaces"
         ],
         "modules-center": [
-            "custom/arch"
+            "custom/arch",
+            "hyprland/submap"
         ],
         "modules-right": [
             "hyprland/window"
@@ -29,13 +30,15 @@
         "output": "HDMI-A-1",
         "include": [
             "~/.config/waybar/modules/arch.jsonc",
-            "~/.config/waybar/modules/workspaces.jsonc"
+            "~/.config/waybar/modules/workspaces.jsonc",
+            "~/.config/waybar/modules/hyprsubmap.jsonc"
         ],
         "modules-left": [
             "hyprland/workspaces"
         ],
         "modules-center": [
-            "custom/arch"
+            "custom/arch",
+            "hyprland/submap"
         ],
         "modules-right": [
             "hyprland/window"

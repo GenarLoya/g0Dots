@@ -11,6 +11,7 @@ choice=$(
     echo "$workspaces" | 
      rofi \
         -dmenu \
+        -p "Workspaces" \
         -config "$ROFI_CONFIG" \
         -theme-str "icon-search { filename: '~/.config/rofi/icons/workspace.svg'; }" 
 )

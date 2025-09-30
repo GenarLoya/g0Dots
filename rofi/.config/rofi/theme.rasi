@@ -30,6 +30,11 @@ element-icon, element-text, scrollbar {
   cursor: pointer;
 }
 
+prompt {
+  width: 100%;
+  padding: 0px 30px;
+}
+
 window {
   location : north;
   width    : 500px;
@@ -41,13 +46,13 @@ window {
   border-color: @bg3;
   border-radius: 6px;
   opacity: 0.1;
+  children: [ prompt, inputbar, listview ];
 }
 
 inputbar {
   spacing  : 8px;
   padding  : 4px 8px;
-  children : [ icon-search, entry ];
-
+  children : [ icon-search, entry];
   background-color: @bg0;
 }
 

@@ -8,6 +8,7 @@ while true; do
     expr=$(
         rofi \
             -dmenu \
+            -p "Calculator" \
             -config "$ROFI_CONFIG" \
             -theme-str "icon-search { filename: '~/.config/rofi/icons/math.svg'; }"
     )
