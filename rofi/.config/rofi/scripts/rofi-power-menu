@@ -15,13 +15,13 @@ case "$choice" in
         systemctl suspend
         ;;
     " Apagar")
-        systemctl poweroff
+        eval $(~/.config/rofi/scripts/rofi-power-off-confirm)
         ;;
     " Reiniciar")
         systemctl reboot
         ;;
     " Bloquear")
         # Dependiendo del lockscreen que uses
-        swaylock -f
+        hyprlock
         ;;
 esac
