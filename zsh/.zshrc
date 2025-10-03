@@ -39,6 +39,8 @@ export FNM_RESOLVE_ENGINES="true"
 export FNM_ARCH="x64"
 rehash
 
+eval "$(fnm env --use-on-cd)"
+
 # Starship init
 export STARSHIP_CONFIG=~/.zsh/starship.toml
 eval "$(starship init zsh)"
