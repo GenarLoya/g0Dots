@@ -32,27 +32,29 @@ element-icon, element-text, scrollbar {
 
 prompt {
   width: 100%;
-  padding: 0px 30px;
+  padding: 5px 10px;
+  border-radius: 0px;
 }
 
 window {
-  location : north;
-  width    : 500px;
-  x-offset : 4px;
-  y-offset : 20px;
+    location : north;
+    width    : 500px;
+    x-offset : 4px;
+    y-offset : 20px;
 
-  background-color: @bg1;
-  border: 1px;
-  border-color: @bg3;
-  border-radius: 6px;
-  opacity: 0.1;
-  children: [ prompt, inputbar, listview ];
+    backdrop : true;
+    blur     : 10px;
+    background-color: rgba(28, 30, 36, 0.95);
+    border: 1px;
+    border-color: @bg3;
+    border-radius: 6px;
+    children: [ inputbar, listview ];
 }
 
 inputbar {
-  spacing  : 8px;
-  padding  : 4px 8px;
-  children : [ icon-search, entry];
+  spacing  : 15px;
+  padding  : 4px 0px;
+  children : [ prompt, icon-search, entry];
   background-color: @bg0;
 }
 
@@ -69,7 +71,7 @@ icon-search {
 
 textbox {
   padding          : 4px 8px;
-  background-color : @bg2;
+  // background-color : @bg2;
 }
 
 listview {
@@ -82,7 +84,7 @@ listview {
 }
 
 element {
-  padding : 4px 8px;
+  padding : 8px 10px;
   spacing : 8px;
 }
 
