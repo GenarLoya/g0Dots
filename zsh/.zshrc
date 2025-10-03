@@ -39,8 +39,6 @@ export FNM_RESOLVE_ENGINES="true"
 export FNM_ARCH="x64"
 rehash
 
-fnm default $(cat ~/.node-version)
-
 # Starship init
 export STARSHIP_CONFIG=~/.zsh/starship.toml
 eval "$(starship init zsh)"
