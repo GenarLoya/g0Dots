@@ -39,8 +39,6 @@ export FNM_RESOLVE_ENGINES="true"
 export FNM_ARCH="x64"
 rehash
 
-eval "$(fnm env --use-on-cd)"
-
 # Starship init
 export STARSHIP_CONFIG=~/.zsh/starship.toml
 eval "$(starship init zsh)"
@@ -58,3 +56,9 @@ esac
 
 # fastfetch
 fastfetch
+# fnm
+FNM_PATH="/home/genarold/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi

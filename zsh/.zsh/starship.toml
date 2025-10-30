@@ -9,7 +9,7 @@ error_symbol = "[](fg:bold red)"
 
 
 [os]
-disabled = false
+disabled = true
 
 [os.symbols]
 Windows = ' '
