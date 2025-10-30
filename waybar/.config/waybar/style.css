@@ -8,48 +8,10 @@ window#waybar {
 * {
   font-family: "JetBrainsMono Nerd Font Mono";
   transition: background-color 0.3s ease-out;
-}
-
-window.laptop * {
-  font-size: 12px;
-}
-
-window.laptoptop * {
-  font-size: 12px;
-}
-
-window.external1 * {
-  font-size: 15px;
-}
-
-window.external1top * {
-  font-size: 15px;
+  font-size: 11px;
 }
 
 /* Modules positioning */
-window.laptop .modules-left,
-window.laptop .modules-center,
-window.laptop .modules-right {
-  padding: 0px 10px;
-  border-radius: 15px;
-  margin: 3px 10px;
-}
-
-window.laptoptop .modules-left,
-window.laptoptop .modules-center,
-window.laptoptop .modules-right {
-  padding: 5px 10px;
-  border-radius: 15px;
-  margin: 3px 10px;
-}
-
-window.external1top .modules-left,
-window.external1top .modules-center,
-window.external1top .modules-right {
-  padding: 5px 10px;
-  border-radius: 15px;
-  margin: 3px 10px;
-}
 
 .modules-center {
   background: transparent;
@@ -60,7 +22,7 @@ window.external1top .modules-right {
 .modules-center,
 .modules-right {
   background: rgba(0, 0, 8, 0.7);
-  padding: 0px 20px;
+  padding: 0px 10px;
   border-radius: 15px;
   margin: 5px 10px;
 }
@@ -115,34 +77,37 @@ window.external1top .modules-right {
   background: rgba(26, 27, 38, 0.9);
 }
 
+#workspaces {
+  padding: 0 5px;
+  border-radius: 15px;
+  background: rgba(0, 0, 8, 0.7);
+}
+
 #workspaces button {
   background: transparent;
   font-weight: 900;
   font-size: 13pt;
   color: #c0caf5;
-  border: none;
-  border-radius: 0px;
+  border: none;  
+  border-radius: 99999px;
   padding: 0 5px;
+  font-size: 30px;
+  margin: 5px 5px;
 }
 
 #workspaces button.active {
-  background: #13131d;
+  background: #202020;
 }
 
 #workspaces button:hover {
-  background: #11111b;
+  background: #202020;
   color: #cdd6f4;
   box-shadow: none;
 }
 
-window.laptop #workspaces button {
-  font-size: 12pt;
-  padding: 0 2px;
-}
-
 #custom-arch {
   padding: 0 5px;
-  font-size: 25px;
+  font-size: 20px;
   transition: color 0.5s;
 }
 
