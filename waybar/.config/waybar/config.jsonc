@@ -1,99 +1,30 @@
-[
-    {
-        "name": "laptop",
-        "layer": "top",
-        "position": "bottom",
-        "height": 15,
-        "spacing": 4,
-        "output": "eDP-1",
-        "include": [
-            "~/.config/waybar/modules/arch.jsonc",
-            "~/.config/waybar/modules/workspaces.jsonc"
-        ],
-        "modules-left": [
-            "hyprland/workspaces"
-        ],
-        "modules-center": [
-            "custom/arch",
-            "hyprland/submap"
-        ],
-        "modules-right": [
-            "hyprland/window"
-        ]
-    },
-    {
-        "name": "external1",
-        "layer": "top",
-        "position": "bottom",
-        "height": 15,
-        "spacing": 4,
-        "output": "HDMI-A-1",
-        "include": [
-            "~/.config/waybar/modules/arch.jsonc",
-            "~/.config/waybar/modules/workspaces.jsonc",
-            "~/.config/waybar/modules/hyprsubmap.jsonc"
-        ],
-        "modules-left": [
-            "hyprland/workspaces"
-        ],
-        "modules-center": [
-            "custom/arch",
-            "hyprland/submap"
-        ],
-        "modules-right": [
-            "hyprland/window"
-        ]
-    },
-    {
-        "name": "laptoptop",
-        "layer": "top",
-        "position": "top",
-        "height": 15,
-        "spacing": 4,
-        "output": "eDP-1",
-        "include": [
-            "~/.config/waybar/modules/network.jsonc",
-            "~/.config/waybar/modules/battery.jsonc",
-            "~/.config/waybar/modules/disk.jsonc",
-            "~/.config/waybar/modules/clock.jsonc"
-        ],
-        "modules-left": [
-            "battery",
-            "disk",
-            "cpu",
-            "memory"
-        ],
-        "modules-center": [
-            "clock"
-        ],
-        "modules-right": [
-            "network"
-        ]
-    },
-    {
-        "name": "external1top",
-        "layer": "top",
-        "position": "top",
-        "height": 15,
-        "spacing": 4,
-        "output": "HDMI-A-1",
-        "include": [
-            "~/.config/waybar/modules/network.jsonc",
-            "~/.config/waybar/modules/battery.jsonc",
-            "~/.config/waybar/modules/disk.jsonc",
-            "~/.config/waybar/modules/clock.jsonc"
-        ],
-        "modules-left": [
-            "battery",
-            "disk",
-            "cpu",
-            "memory"
-        ],
-        "modules-center": [
-            "clock"
-        ],
-        "modules-right": [
-            "network"
-        ]
-    }
-]
+{
+    "layer": "top",
+    "position": "top",
+    "height": 15,
+    "spacing": 4,
+    "include": [
+        "~/.config/waybar/modules/arch.jsonc",
+        "~/.config/waybar/modules/workspaces.jsonc",
+        "~/.config/waybar/modules/arch.jsonc",
+        "~/.config/waybar/modules/hyprsubmap.jsonc",
+        "~/.config/waybar/modules/network.jsonc",
+        "~/.config/waybar/modules/battery.jsonc",
+        "~/.config/waybar/modules/disk.jsonc",
+        "~/.config/waybar/modules/clock.jsonc"
+    ],
+    "modules-left": [
+        "custom/arch",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "network",
+        "battery",
+        "disk",
+        "cpu",
+        "memory"
+    ]
+}
