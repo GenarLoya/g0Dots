@@ -1,5 +1,4 @@
 {
-    "$schema": "zed://schemas/settings",
     "project_name": null,
     "theme": "One Dark",
     "icon_theme": "Zed (Default)",
