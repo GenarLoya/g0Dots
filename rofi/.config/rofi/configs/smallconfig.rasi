@@ -1,5 +1,5 @@
 @import "~/.config/rofi/configs/baseconfig.rasi"
 
 * {
-    font: "JetBrainsMono Nerd Font Mono 10";
+    font: "JetBrainsMono Nerd Font Mono 9";
 }
