@@ -45,7 +45,6 @@ eval "$(starship init zsh)"
 
 source $ZSH/oh-my-zsh.sh
 
-
 # pnpm
 export PNPM_HOME="/home/genarold/.local/share/pnpm"
 case ":$PATH:" in
@@ -62,3 +61,6 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# zed 
+export PATH=$HOME/.local/bin:$PATH
