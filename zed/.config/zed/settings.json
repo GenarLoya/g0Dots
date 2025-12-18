@@ -4,7 +4,7 @@
     "icon_theme": "Zed (Default)",
     "base_keymap": "VSCode",
     "features": {
-        "edit_prediction_provider": "supermaven"
+        "edit_prediction_provider": "copilot"
     },
     "buffer_font_family": "JetBrainsMono Nerd Font",
     "buffer_font_fallbacks": null,
@@ -532,9 +532,9 @@
         // The default model to use when creating new threads.
         "default_model": {
             // The provider to use.
-            "provider": "google",
+            "provider": "copilot_chat",
             // The model to use.
-            "model": "gemini-2.5-flash"
+            "model": "claude-sonnet-4.5"
         },
         // Additional parameters for language model requests. When making a request to a model, parameters will be taken
         // from the last entry in this list that matches the model's provider and name. In each entry, both provider
@@ -992,7 +992,7 @@
         //     "mode": "eager"
         // 2. Display predictions inline only when holding a modifier key (alt by default).
         //     "mode": "subtle"
-        "mode": "subtle",
+        "mode": "eager",
         // Copilot-specific settings
         // "copilot": {
         //   "enterprise_uri": "",
@@ -1051,7 +1051,7 @@
         //     }
         "shell": "system",
         // Where to dock terminals panel. Can be `left`, `right`, `bottom`.
-        "dock": "bottom",
+        "dock": "right",
         // Default width when the terminal is docked to the left or right.
         "default_width": 640,
         // Default height when the terminal is docked to the bottom.
