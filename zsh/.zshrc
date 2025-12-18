@@ -65,3 +65,9 @@ fi
 
 # zed
 export PATH=$HOME/.local/bin:$PATH
+
+# github cli
+eval "$(gh completion --shell zsh)"
+
+# docker completions
+eval "$(docker completion zsh)"
