@@ -62,9 +62,10 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-<<<<<<< HEAD
-# zed 
-=======
 # zed
->>>>>>> f05cfbacd2ea8ec1b2b70aafae1b788cf74e6fae
 export PATH=$HOME/.local/bin:$PATH
+
+# github cli
+eval "$(gh completion -s zsh)"
+export PATH="/home/genarold/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/genarold/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
