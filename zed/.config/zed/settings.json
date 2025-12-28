@@ -1,10 +1,10 @@
 {
     "project_name": null,
-    "theme": "One Dark",
+    "theme": "Catppuccin Macchiato (Blur) [Heavy]",
     "icon_theme": "Zed (Default)",
     "base_keymap": "VSCode",
     "features": {
-        "edit_prediction_provider": "zed"
+        "edit_prediction_provider": "copilot"
     },
     "buffer_font_family": "JetBrainsMono Nerd Font",
     "buffer_font_fallbacks": null,
@@ -532,9 +532,9 @@
         // The default model to use when creating new threads.
         "default_model": {
             // The provider to use.
-            "provider": "google",
+            "provider": "copilot_chat",
             // The model to use.
-            "model": "gemini-2.5-flash"
+            "model": "claude-sonnet-4.5"
         },
         // Additional parameters for language model requests. When making a request to a model, parameters will be taken
         // from the last entry in this list that matches the model's provider and name. In each entry, both provider
@@ -876,10 +876,10 @@
         // Settings for inline diagnostics
         "inline": {
             // Whether to show diagnostics inline or not
-            "enabled": false,
+            "enabled": true,
             // The delay in milliseconds to show inline diagnostics after the
             // last diagnostic update.
-            "update_debounce_ms": 150,
+            "update_debounce_ms": 50,
             // The amount of padding between the end of the source line and the start
             // of the inline diagnostic in units of em widths.
             "padding": 4,
@@ -1051,7 +1051,7 @@
         //     }
         "shell": "system",
         // Where to dock terminals panel. Can be `left`, `right`, `bottom`.
-        "dock": "bottom",
+        "dock": "right",
         // Default width when the terminal is docked to the left or right.
         "default_width": 640,
         // Default height when the terminal is docked to the bottom.

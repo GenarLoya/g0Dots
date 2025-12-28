@@ -66,6 +66,7 @@ fi
 export PATH=$HOME/.local/bin:$PATH
 
 # github cli
-eval "$(gh completion -s zsh)"
-export PATH="/home/genarold/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/genarold/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+eval "$(gh completion --shell zsh)"
+
+# docker completions
+eval "$(docker completion zsh)"

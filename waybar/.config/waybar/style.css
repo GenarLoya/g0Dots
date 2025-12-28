@@ -1,30 +1,30 @@
 window#waybar {
-  background: rgba(26, 27, 38, 0.75);
-  color: #c0caf5;
-  transition: background-color 0.5s;
+    background: rgba(26, 27, 38, 0.75);
+    color: #c0caf5;
+    transition: background-color 0.5s;
 }
 
 /* Monitor AL */
 * {
-  font-family: "JetBrainsMono Nerd Font Mono";
-  transition: background-color 0.3s ease-out;
-  font-size: 11px;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    transition: background-color 0.3s ease-out;
+    font-size: 14px;
 }
 
 /* Modules positioning */
 
 .modules-center {
-  background: transparent;
-  padding: 0 12px;
+    background: transparent;
+    padding: 0 12px;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  background: rgba(0, 0, 8, 0.7);
-  padding: 0px 10px;
-  border-radius: 15px;
-  margin: 5px 10px;
+    background: rgba(0, 0, 8, 0.7);
+    padding: 0px 10px;
+    border-radius: 15px;
+    margin: 5px 10px;
 }
 
 /* Modules */
@@ -46,13 +46,13 @@ window#waybar {
 #power-profiles-daemon,
 #language,
 #mpd {
-  padding: 0 10px;
-  border-radius: 15px;
+    padding: 0 10px;
+    border-radius: 15px;
 }
 
 #submap {
-  background-color: rebeccapurple;
-  padding: 0 10px;
+    background-color: rebeccapurple;
+    padding: 0 10px;
 }
 
 /* Modules hover effects */
@@ -74,48 +74,48 @@ window#waybar {
 #power-profiles-daemon:hover,
 #language:hover,
 #mpd:hover {
-  background: rgba(26, 27, 38, 0.9);
+    background: rgba(26, 27, 38, 0.9);
 }
 
 #workspaces {
-  padding: 0 5px;
-  border-radius: 15px;
-  background: rgba(0, 0, 8, 0.7);
+    padding: 0 5px;
+    border-radius: 15px;
+    background: rgba(0, 0, 8, 0.7);
 }
 
 #workspaces button {
-  background: transparent;
-  font-weight: 900;
-  font-size: 13pt;
-  color: #c0caf5;
-  border: none;  
-  border-radius: 99999px;
-  padding: 0 5px;
-  font-size: 30px;
-  margin: 5px 5px;
+    background: transparent;
+    font-weight: 900;
+    font-size: 13pt;
+    color: #c0caf5;
+    border: none;
+    border-radius: 99999px;
+    padding: 0 5px;
+    font-size: 30px;
+    margin: 5px 5px;
 }
 
 #workspaces button.active {
-  background: #202020;
+    background: #202020;
 }
 
 #workspaces button:hover {
-  background: #202020;
-  color: #cdd6f4;
-  box-shadow: none;
+    background: #202020;
+    color: #cdd6f4;
+    box-shadow: none;
 }
 
 #custom-arch {
-  padding: 0 5px;
-  font-size: 20px;
-  transition: color 0.5s;
+    padding: 0 5px;
+    font-size: 20px;
+    transition: color 0.5s;
 }
 
 window.laptop #custom-arch {
-  padding: 0 5px;
-  font-size: 20px;
+    padding: 0 5px;
+    font-size: 20px;
 }
 
 #custom-arch:hover {
-  color: #1793d1;
+    color: #1793d1;
 }

@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# Configuración Rofi
+ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
+
+# Opciones del menú
+options=" Región\n Ventana\n Monitor\n Región (editar)\n Ventana (editar)\n Monitor (editar)"
+
+# Mostrar menú
+choice=$(echo -e "$options" | rofi -dmenu -p "Screenshot" -config "$ROFI_CONFIG")
+
+# Ejecutar acción según elección
+case "$choice" in
+    " Región")
+        hyprshot -m region
+        ;;
+    " Ventana")
+        hyprshot -m window
+        ;;
+    " Monitor")
+        hyprshot -m output
+        ;;
+    " Región (editar)")
+        TEMP_FILE="/tmp/hyprshot_$(date +%s).png"
+        hyprshot -m region -o "$TEMP_FILE" --silent && swappy -f "$TEMP_FILE"
+        ;;
+    " Ventana (editar)")
+        TEMP_FILE="/tmp/hyprshot_$(date +%s).png"
+        hyprshot -m window -o "$TEMP_FILE" --silent && swappy -f "$TEMP_FILE"
+        ;;
+    " Monitor (editar)")
+        TEMP_FILE="/tmp/hyprshot_$(date +%s).png"
+        hyprshot -m output -o "$TEMP_FILE" --silent && swappy -f "$TEMP_FILE"
+        ;;
+esac
