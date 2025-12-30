@@ -80,7 +80,7 @@ window#waybar {
 #workspaces {
     padding: 0 5px;
     border-radius: 15px;
-    background: rgba(0, 0, 8, 0.7);
+    /*background: rgba(0, 0, 8, 0.7);*/
 }
 
 #workspaces button {
@@ -99,9 +99,20 @@ window#waybar {
     background: #202020;
 }
 
+#workspaces button.urgent {
+    background: #b23737;
+    color: #202020;
+}
+
 #workspaces button:hover {
     background: #202020;
     color: #cdd6f4;
+    box-shadow: none;
+}
+
+#workspaces button.urgent:hover {
+    background: #b23737;
+    color: #202020;
     box-shadow: none;
 }
 
