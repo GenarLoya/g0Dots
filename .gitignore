@@ -1,0 +1,76 @@
+# Binaries and compiled artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+*.out
+
+# Dependencies
+node_modules/
+*.egg-info/
+dist/
+build/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.vim/
+.emacs.d/
+
+# Environment and configuration
+.env
+.env.local
+.env.*.local
+.cache/
+.config/*/history
+.config/*/cache
+env.conf
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+.backup/
+tmp/
+temp/
+
+# OS-specific
+Thumbs.db
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Local development
+local/
+.local/
+secrets/
+private/
+
+# Generated files (but keep config examples)
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Specific to dotfiles
+# Keep configuration files but ignore local overrides
+!*.conf
+!*.config
+local.conf
+local.config
+*.local.conf

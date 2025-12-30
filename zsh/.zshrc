@@ -62,6 +62,7 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
+# zed
 export PATH=$HOME/.local/bin:$PATH
 
 # github cli
