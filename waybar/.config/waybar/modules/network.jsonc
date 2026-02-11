@@ -1,13 +1,12 @@
 {
-    "network": {
-        "tooltip": true,
-        "interval": 10,
-        "format-wifi": "󰀂 {essid} ({signalStrength}%)",
-        "format-ethernet": "󰛳 {ifname}: {ipaddr}/{cidr}",
-        "format-disconnected": "Disconnected",
-        "on-click": "nm-connection-editor",
-        "tooltip-format-wifi": "SSID: {essid}\nSignal: {signalStrength}%\nInterface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nMAC: {mac}\n↓ {bandwidthDownBits}  ↑ {bandwidthUpBits}",
-        "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nMAC: {mac}\n↓ {bandwidthDownBits}  ↑ {bandwidthUpBits}",
-        "tooltip-format-disconnected": "Disconnected\nInterface: {ifname}"
-    }
+  "network": {
+    "tooltip": true,
+    "interval": 10,
+    "format-wifi": "󰀂 {essid} ({signalStrength}%)",
+    "format-ethernet": "󰛳 {ifname}: {ipaddr}/{cidr}",
+    "format-disconnected": "Disconnected",
+    "tooltip-format-wifi": "SSID: {essid}\nSignal: {signalStrength}%\nInterface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nMAC: {mac}\n↓ {bandwidthDownBits}  ↑ {bandwidthUpBits}",
+    "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nMAC: {mac}\n↓ {bandwidthDownBits}  ↑ {bandwidthUpBits}",
+    "tooltip-format-disconnected": "Disconnected\nInterface: {ifname}",
+  },
 }

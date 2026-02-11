@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
+
+MESSAGE="${1:- Are you sure?}"
+YES_ACTION="$2"
+
+options="Yes\nNo"
+
+choice=$(echo -e "$options" | rofi -dmenu -p "$MESSAGE" -config "$ROFI_CONFIG")
+
+case "$choice" in
+    "Yes")
+        if [ -n "$YES_ACTION" ]; then
+            eval "$YES_ACTION"
+        fi
+        ;;
+    *)
+        exit 0
+        ;;
+esac
