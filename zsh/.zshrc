@@ -1,3 +1,8 @@
+# Auto start tmux
+if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ] && [ -z "$SSH_CONNECTION" ]; then
+  tmux attach -t main || tmux new -s main
+fi
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -70,3 +75,6 @@ eval "$(gh completion --shell zsh)"
 
 # docker completions
 eval "$(docker completion zsh)"
+
+# Alias
+alias zed="zeditor"
