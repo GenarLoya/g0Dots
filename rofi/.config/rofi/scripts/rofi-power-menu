@@ -4,24 +4,29 @@
 ROFI_CONFIG="$(~/.config/rofi/scripts/detect-monitor)"
 
 # Opciones del menú
-options=" Suspender\n Apagar\n Reiniciar\n Bloquear"
+options=" Power Off\n Reboot\n󰍃 Logout\n Block"
 
 # Mostrar menú
 choice=$(echo -e "$options" | rofi -dmenu -p "Power" -config "$ROFI_CONFIG")
 
 # Ejecutar acción según elección
 case "$choice" in
-    " Suspender")
-        systemctl suspend
+    " Power Off")
+        ~/.config/rofi/scripts/rofi-confirm \
+        "Do you want to power off?" \
+        "systemctl poweroff"
         ;;
-    " Apagar")
-        eval $(~/.config/rofi/scripts/rofi-power-off-confirm)
+    " Reboot")
+        ~/.config/rofi/scripts/rofi-confirm \
+        "Do you want to reboot the system?" \
+        "systemctl reboot"
         ;;
-    " Reiniciar")
-        systemctl reboot
+    "󰍃 Logout")
+        ~/.config/rofi/scripts/rofi-confirm \
+        "Do you want to close the session?" \
+        "hyprctl dispatch exit"
         ;;
-    " Bloquear")
-        # Dependiendo del lockscreen que uses
+    " Block")
         hyprlock
         ;;
 esac
