@@ -4,12 +4,12 @@ set -a
 set +a
 
 # set ZSH_ZELLIJ_AUTOSTART to false if ZED_TERM exists or equal true
-if [[ -n "$ZED_TERM" || "$ZED_TERM" == "true" ]]; then
+if [[ -n "$ZED_TERM" ]]; then
     export ZSH_ZELLIJ_AUTOSTART="false"
 fi
 
-# start zellij
-if [[ -n "$ZSH_ZELLIJ_AUTOSTART" || "$ZSH_ZELLIJ_AUTOSTART" == "true" ]]; then
+# Start Zellij only if explicitly true
+if [[ "$ZSH_ZELLIJ_AUTOSTART" == "true" ]]; then
     eval "$(zellij setup --generate-auto-start zsh)"
 fi
 
