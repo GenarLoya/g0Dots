@@ -39,7 +39,7 @@ layout {
               datetime_format "%A, %d %b %Y %H:%M"
               datetime_timezone "America/Chihuahua"
             }
-        }F
+        }
         children
     }
 }
