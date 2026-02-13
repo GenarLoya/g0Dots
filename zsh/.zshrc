@@ -1,7 +1,7 @@
-# Auto start tmux
-if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ] && [ -z "$SSH_CONNECTION" ]; then
-  tmux attach -t main || tmux new -s main
-fi
+# Env load
+set -a
+[ -f ~/.env ] && source ~/.env
+set +a
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
