@@ -5,9 +5,11 @@
       "command": "npx",
       "args": ["-y", "mcp-remote", "http://127.0.0.1:64343/mcp"],
     },
+    "mcp-server-github": {
+      "enabled": true,
+    },
   },
   "edit_predictions": {
-    "provider": "supermaven",
     "mode": "subtle",
   },
   "diagnostics": {
@@ -22,14 +24,15 @@
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5.2-codex",
+      "model": "gpt-4o",
     },
     "model_parameters": [],
   },
+  "features": {
+    "edit_prediction_provider": "supermaven",
+  },
   "terminal": {
-    "env": {
-      "GITHUB_TOKEN": "$GITHUB_TOKEN",
-    },
+    "env": {},
     "font_family": "JetBrainsMono Nerd Font Mono",
     "line_height": {
       "custom": 1.0,
