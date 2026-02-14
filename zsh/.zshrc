@@ -1,3 +1,18 @@
+# Env load
+set -a
+[ -f ~/.env ] && source ~/.env
+set +a
+
+# set ZSH_ZELLIJ_AUTOSTART to false if ZED_TERM exists or equal true
+if [[ -n "$ZED_TERM" ]]; then
+    export ZSH_ZELLIJ_AUTOSTART="false"
+fi
+
+# Start Zellij only if explicitly true
+if [[ "$ZSH_ZELLIJ_AUTOSTART" == "true" ]]; then
+    eval "$(zellij setup --generate-auto-start zsh)"
+fi
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -5,7 +20,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/genarold/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 fpath=($HOME/.zsh/completions $fpath)
 
@@ -15,7 +30,13 @@ compinit
 
 # oh my zsh
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
+plugins=(
+    git
+    fzf-tab
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    fast-syntax-highlighting
+)
 
 # My util scripts
 export PATH="$HOME/.config/my-utils:$PATH"
@@ -70,3 +91,9 @@ eval "$(gh completion --shell zsh)"
 
 # docker completions
 eval "$(docker completion zsh)"
+<<<<<<< HEAD
+=======
+
+# Alias
+alias zed="zeditor"
+>>>>>>> 5aad36a036dc407b253b64e0fb187490e2c92b2d

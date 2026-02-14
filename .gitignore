@@ -74,3 +74,4 @@ private/
 local.conf
 local.config
 *.local.conf
+cava/.config/cava/themes/tricolor

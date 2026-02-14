@@ -1,0 +1,7 @@
+{
+  "custom/player-display": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "waybar-module-music --format \" | %icon% %artist% | %title%\" --play-icon \"\" --pause-icon \"\" --marquee --title-width 25 --artist-width 25 --stopped-label \"| Nothing playing...\"",
+  },
+}
