@@ -10,34 +10,109 @@ layout {
     default_tab_template {
         pane size=1 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-              format_left   " #[fg=#D7DDE9]#[bg=#D7DDE9,fg=#051525] 󰆘 {session} #[fg=#D7DDE9] #[fg=#D7DDE9]#[bg=#D7DDE9,fg=#051525]  TABS #[fg=#D7DDE9] {tabs}"
-              format_right  "{command_git_branch} {datetime}"
-              format_space  ""
 
-              border_enabled  "false"
-              border_char     "─"
-              border_format   "#[fg=#BE94E0]{char}"
-              border_position "top"
+                // -- Gruvbox Dark mode
+                color_bg0 "#282828" //dark0
+                color_bg1 "#3c3836" //dark1
+                color_bg2 "#504945" //dark2
+                color_bg3 "#665c54" //dark3
+                color_bg4 "#7c6f64" //dark4
+                color_fg0 "#fbf1c7" //light0
+                color_fg1 "#ebdbb2" //light1
+                color_fg2 "#d5c4a1" //light2
+                color_fg3 "#bdae93" //light3
+                color_fg4 "#a89984" //light4
+                color_red "#f2594b" // bright_red
+                color_green "#b8bb26" //bright_green
+                color_yellow "#e9b143" // bright_yellow
+                color_blue "#83a598" //bright_blue
+                color_purple "#d3869b" //bright_purple
+                color_aqua "#8ec07c" //bright_aqua
+                color_gray "#a89984" //bright_gray
+                color_orange "#fe8019" //bright_orange
+                color_neutral_red "#cc241d" //neutral_red
+                color_neutral_green "#98971a" //neutral_green
+                color_neutral_yellow "#d79921" //neutral_yellow
+                color_neutral_blue "#458588" //neutral_blue
+                color_neutral_purple "#b16286" //neutral_purple
+                color_neutral_aqua "#689d6a" //neutral_aqua
+                color_neutral_gray "#928374" //neutral_gray
+                color_neutral_orange "#d65d0e" //neatural_orange
 
-              hide_frame_for_single_pane "true"
+                color_base "#232136"
+                color_surface "#2a273f"
+                color_overlay "#393552"
+                color_muted "#6e6a86"
+                color_subtle "#908caa"
+                color_text "#e0def4"
+                color_love "#eb6f92"
+                color_gold "#f6c177"
+                color_rose "#ea9a97"
+                color_pine "#3e8fb0"
+                color_foam "#9ccfd8"
+                color_Iris "#c4a7e7"
+                color_highlight_low "#2a283e"
+                color_highlight_med "#44415a"
+                color_highlight_high "#56526e"
 
-              mode_normal  "#[bg=#051525]"
-              mode_tmux    "#[bg=#051525]"
+                format_left   "#[fg=$text]   TABS | {tabs}"
+                format_right  "{pipe_zjstatus_hints} | #[fg=$text] 󰬔 {mode}#[]"
+                format_space  "#[fg=$fg1]"
+                format_hide_on_overlength "true"
+                format_precedence "lrc"
 
-              tab_normal    " #[fg=#BE94E4]   {name}  "
-              tab_active    " #[fg=#051525]#[bg=#051525,fg=#BE94E4]  {name} #[fg=#051525]"
+                border_enabled  "false"
+                border_char     "─"
+                border_format   "#[fg=$bg1]{char}"
+                border_position "top"
 
-              // tab_normal   "#[fg=#051525] #[fg=#BE94E4]{name} "
-              // tab_active   "#[fg=#BE94E4,bold,italic]  {name} "
+                hide_frame_for_single_pane "false"
 
-              command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
-              command_git_branch_format      "#[fg=#BE94E4] {stdout} "
-              command_git_branch_interval    "10"
-              command_git_branch_rendermode  "static"
+                mode_normal        "#[fg=$text] NORMAL "
+                mode_locked        "#[fg=$muted] LOCKED "
+                mode_pane          "#[fg=$pine,bold] PANE "
+                mode_tab           "#[fg=$rose,bold] TAB "
+                mode_scroll        "#[fg=$foam,bold] SCROLL "
+                mode_enter_search  "#[fg=$text,bold] ENT-SEARCH "
+                mode_search        "#[fg=$subtle,bold] SEARCH "
+                mode_resize        "#[fg=$gold,bold] RESIZE "
+                mode_rename_tab    "#[fg=$gold,bold] RENAME TAB "
+                mode_rename_pane   "#[fg=$gold,bold] RENAME PANE "
+                mode_move          "#[fg=$gold,bold] MOVE "
+                mode_session       "#[fg=$love,bold] SESSION "
+                mode_prompt        "#[fg=$love,bold] PROMPT "
 
-              datetime        "#[fg=#6e6a86,bold] {format} "
-              datetime_format "%A, %d %b %Y %H:%M"
-              datetime_timezone "America/Chihuahua"
+                tab_normal              "#[fg=$subtle] {index} #[fg=$subtle] {name} {floating_indicator} "
+                tab_normal_fullscreen   "#[fg=$subtle] {index} #[fg=$subtle] {name} {fullscreen_indicator} "
+                tab_normal_sync         "#[fg=$subtle] {index} #[fg=$subtle] {name} {sync_indicator} "
+                tab_active              "#[bg=$overlay,fg=$text] {index} #[bg=$overlay,fg=$text,bold] {name} {floating_indicator} "
+                tab_active_fullscreen   "#[bg=$overlay,fg=$text] {index} #[bg=$overlay,fg=$text,bold] {name} {fullscreen_indicator} "
+                tab_active_sync         "#[bg=$overlay,fg=$text] {index} #[bg=$overlay,fg=$text,bold] {name} {sync_indicator} "
+                tab_separator           " "
+
+                tab_sync_indicator       ""
+                tab_fullscreen_indicator "󰊓"
+                tab_floating_indicator   "󰹙"
+
+                notification_format_unread "#[bg=$orange,fg=$bg1]#[bg=$orange,fg=$bg1] {message} #[bg=$bg1,fg=$orange]"
+                notification_format_no_notifications ""
+                notification_show_interval "10"
+
+                command_host_command    "uname -n"
+                command_host_format     "{stdout}"
+                command_host_interval   "0"
+                command_host_rendermode "static"
+
+                command_user_command    "whoami"
+                command_user_format     "{stdout}"
+                command_user_interval   "0"
+                command_user_rendermode "static"
+
+                datetime          "{format}"
+                datetime_format   "%Y-%m-%d"
+                datetime_timezone "Asia/Shanghai"
+
+                pipe_zjstatus_hints_format "{output}"
             }
         }
         children
