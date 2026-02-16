@@ -91,6 +91,9 @@ eval "$(gh completion --shell zsh)"
 
 # docker completions
 eval "$(docker completion zsh)"
+<<<<<<< HEAD
+=======
 
 # Alias
 alias zed="zeditor"
+>>>>>>> 5aad36a036dc407b253b64e0fb187490e2c92b2d

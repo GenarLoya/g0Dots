@@ -1,0 +1,7 @@
+{
+    "conventionalCommits.scopes": [
+        "notifications",
+        "experimental",
+        "rofi"
+    ]
+}
